@@ -1,8 +1,8 @@
 const cards = document.getElementById("cards");
 
 const modal = document.getElementById("modal");
-const frame = document.getElementById("projectFrame");
-const closeModal = document.getElementById("closeModal");
+const viewer = document.getElementById("viewer");
+const closeBtn = document.getElementById("close");
 
 projetos.forEach(projeto => {
 
@@ -12,17 +12,11 @@ card.className = "card";
 
 card.innerHTML = `
 <img src="${projeto.imagem}">
-<div class="card-content">
+<div class="content">
 
 <h3>${projeto.nome}</h3>
 
 <p>${projeto.descricao}</p>
-
-<div class="tags">
-<span>HTML</span>
-<span>CSS</span>
-<span>JS</span>
-</div>
 
 <button>Abrir Projeto</button>
 
@@ -31,9 +25,8 @@ card.innerHTML = `
 
 card.querySelector("button").onclick = () => {
 
+viewer.src = projeto.arquivo;
 modal.classList.add("active");
-
-frame.src = projeto.arquivo;
 
 };
 
@@ -41,10 +34,9 @@ cards.appendChild(card);
 
 });
 
-closeModal.onclick = () => {
+closeBtn.onclick = () => {
 
+viewer.src = "";
 modal.classList.remove("active");
-
-frame.src = "";
 
 };
