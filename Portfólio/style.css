@@ -1,1 +1,246 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Inter,sans-serif;
+background:#3A4046;
+color:white;
+overflow-x:hidden;
+}
+
+.bg{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at top,#1F8085 0%,transparent 40%),
+radial-gradient(circle at bottom,#D92888 0%,transparent 30%);
+opacity:.25;
+pointer-events:none;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(15px);
+background:rgba(0,0,0,.15);
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-family:Orbitron;
+font-weight:700;
+}
+
+.logo img{
+width:45px;
+height:45px;
+object-fit:contain;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav a:hover{
+color:#7DBABB;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-family:Orbitron;
+font-size:4rem;
+max-width:900px;
+}
+
+.hero p{
+margin-top:20px;
+max-width:600px;
+font-size:1.1rem;
+color:#ADB8C4;
+}
+
+.btn{
+margin-top:30px;
+padding:15px 35px;
+border-radius:15px;
+text-decoration:none;
+background:#1F8085;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px #1F8085;
+}
+
+.projetos{
+padding:120px 8%;
+}
+
+.projetos h2{
+font-size:3rem;
+font-family:Orbitron;
+margin-bottom:40px;
+}
+
+#cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(125,186,187,.25);
+backdrop-filter:blur(12px);
+border-radius:20px;
+overflow:hidden;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(125,186,187,.4);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card h3{
+font-size:1.4rem;
+margin-bottom:10px;
+}
+
+.card p{
+color:#ADB8C4;
+margin-bottom:15px;
+}
+
+.tags{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:15px;
+}
+
+.tags span{
+background:#1F8085;
+padding:5px 12px;
+border-radius:20px;
+font-size:.8rem;
+}
+
+.card button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#D92888;
+color:white;
+font-weight:600;
+cursor:pointer;
+}
+
+.sobre{
+padding:120px 8%;
+text-align:center;
+}
+
+.sobre h2{
+font-family:Orbitron;
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.sobre p{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#ADB8C4;
+}
+
+.modal{
+position:fixed;
+inset:0;
+background:black;
+display:none;
+z-index:9999;
+}
+
+.modal.active{
+display:block;
+}
+
+#projectFrame{
+width:100%;
+height:100%;
+border:none;
+}
+
+#closeModal{
+position:absolute;
+top:20px;
+right:20px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#D92888;
+color:white;
+font-size:1.2rem;
+cursor:pointer;
+z-index:10000;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+display:none;
+}
+
+}
