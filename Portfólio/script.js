@@ -1,42 +1,30 @@
 const cards = document.getElementById("cards");
 
-const modal = document.getElementById("modal");
-const viewer = document.getElementById("viewer");
-const closeBtn = document.getElementById("close");
-
 projetos.forEach(projeto => {
 
-const card = document.createElement("div");
+    const div = document.createElement("div");
 
-card.className = "card";
+    div.className = "project";
 
-card.innerHTML = `
-<img src="${projeto.imagem}">
-<div class="content">
+    div.innerHTML = `
+    
+        <div class="project-info">
+            <h3>${projeto.nome}</h3>
+            <p>${projeto.descricao}</p>
+        </div>
 
-<h3>${projeto.nome}</h3>
+        <button class="open">
+            Abrir →
+        </button>
 
-<p>${projeto.descricao}</p>
+    `;
 
-<button>Abrir Projeto</button>
+    div.querySelector(".open").onclick = () => {
 
-</div>
-`;
+        window.location.href = projeto.arquivo;
 
-card.querySelector("button").onclick = () => {
+    };
 
-viewer.src = projeto.arquivo;
-modal.classList.add("active");
-
-};
-
-cards.appendChild(card);
+    cards.appendChild(div);
 
 });
-
-closeBtn.onclick = () => {
-
-viewer.src = "";
-modal.classList.remove("active");
-
-};
