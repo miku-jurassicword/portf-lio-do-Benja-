@@ -1,21 +1,27 @@
 const projetos = [
 
 {
-    nome: "Eco Valley",
-    descricao: "Jogo de farming sustentável inspirado em jogos indie.",
-    arquivo: "Projetos/eco-valley/index.html"
+    nome:"Eco Valley",
+    descricao:"Jogo de farming sustentável.",
+    categoria:"games",
+    linguagem:"js",
+    arquivo:"Projetos/eco-valley/index.html"
 },
 
 {
-    nome: "Radar Saúde",
-    descricao: "Mapa e consulta de hospitais públicos brasileiros.",
-    arquivo: "Projetos/radar-saude/Radar_saude_completo.html"
+    nome:"Radar Saúde",
+    descricao:"Sistema de localização de hospitais.",
+    categoria:"web",
+    linguagem:"html",
+    arquivo:"Projetos/radar-saude/index.html"
 },
 
 {
-    nome: "Greenvale",
-    descricao: "Projeto voltado para saúde, bem-estar e qualidade de vida.",
-    arquivo: "Projetos/greenvale/index.html"
+    nome:"Greenvale",
+    descricao:"Projeto ambiental.",
+    categoria:"games",
+    linguagem:"js",
+    arquivo:"Projetos/greenvale/index.html"
 }
 
 ];
