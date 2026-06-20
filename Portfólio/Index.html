@@ -7,45 +7,94 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<section class="hero">
+<div class="sidebar">
 
-<div class="logo-circle"></div>
+    <div class="logo">
+        <div class="logo-icon"></div>
 
-<h1>BENJAMIM PORTFOLIO</h1>
+        <div>
+            <h3>BENJAMIM</h3>
+            <span>PORTFOLIO</span>
+        </div>
+    </div>
 
-<p>
-Projetos e experiências desenvolvidos com
-HTML, CSS e JavaScript.
-</p>
+    <div class="menu">
 
-<a href="#projetos" class="explore">
-Explorar
-</a>
+        <button class="active">
+            🌾 Eco Valley
+        </button>
 
-</section>
+        <button>
+            🏥 Radar Saúde
+        </button>
 
-<section id="projetos" class="projects">
+        <button>
+            🌱 Greenvale
+        </button>
 
-<h2>PROJETOS</h2>
+    </div>
 
-<div id="cards"></div>
+    <div class="status">
 
-</section>
+        <h4>SISTEMA</h4>
 
-<div class="modal" id="modal">
+        <div class="bar">
+            <div class="fill"></div>
+        </div>
 
-<button id="close">
-✕
-</button>
+        <p>ONLINE</p>
 
-<iframe id="viewer"></iframe>
+    </div>
 
 </div>
+
+<main>
+
+    <div class="bg-text">
+        BP
+    </div>
+
+    <div class="top">
+
+        <span class="path">
+            / HOME / PORTFOLIO
+        </span>
+
+        <h1>
+            BENJAMIM
+        </h1>
+
+        <h2>
+            PORTFOLIO
+        </h2>
+
+        <p>
+            Projetos, jogos e experiências criadas com HTML, CSS e JavaScript.
+        </p>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card">
+            <span>TOTAL DE PROJETOS</span>
+            <h3>3</h3>
+        </div>
+
+        <div class="card">
+            <span>TECNOLOGIAS</span>
+            <h3>HTML CSS JS</h3>
+        </div>
+
+    </div>
+
+    <div id="cards" class="projects"></div>
+
+</main>
 
 <script src="Data/projetos.js"></script>
 <script src="script.js"></script>
