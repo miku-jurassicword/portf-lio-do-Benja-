@@ -21,10 +21,40 @@ const projects = [
     featured: true,
     fileUrl: "./projects/radar-saude.html",
     fileLabel: "Abrir Projeto",
-    githubUrl: "",
+    githubUrl: "https://github.com/miku-jurassicword/Radar_Sa-de",
     demoUrl: "./projects/radar-saude.html",
-    createdAt: "2025",
+    createdAt: "2026",
   },
+   
+   {
+      id: "Eco-Valley",
+      title: "Eco Valley",
+      description: "Jogo/Site feito para o concurso Agrinho 2026 ",
+      longDescription: "Jogo/Site feito para o concurso Agrinho 2026 para concientizar a agronomia sustentavel",
+      category: "js",         // "js" | "python" | "game" | "other"
+      technologies: ["Js", "HTML","css","AgroForte"],
+      featured: false,
+      fileUrl: "./projects/Eco-Valley-main/index.html",  // arquivo que pode ser aberto
+      fileLabel: "Abrir Projeto",
+      githubUrl: "https://github.com/miku-jurassicword/Eco-Valley",
+      demoUrl: ".projects/Eco-Valley-main/index.html",
+      createdAt: "2026",
+    },
+
+    {
+      id: "Green-Valle",
+      title: "Green Valle",
+      description: "Site com jogo integrado para incentivar a alimentação saúdavel ",
+      longDescription: "Site com jogo integrado para incentivar a alimentação saúdavel ",
+      category: "js",         // "js" | "python" | "game" | "other"
+      technologies: ["Js", "HTML","css","AgroForte"],
+      featured: false,
+      fileUrl: "./projects/Greenvalley-main/index.html",  // arquivo que pode ser aberto
+      fileLabel: "Abrir Projeto",
+      githubUrl: "https://github.com/miku-jurassicword/Greenvalley",
+      demoUrl: ".projects/Greenvalley-main/index.html",
+      createdAt: "2026",
+    },
   /*
    * TEMPLATE — copie aqui para adicionar novo projeto:
    *
