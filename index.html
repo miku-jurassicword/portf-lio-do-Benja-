@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benjamim — Dev JS, Python &amp; Games</title>
+  <meta name="description" content="Portfólio de Benjamim, desenvolvedor JavaScript, Python e Game Dev." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- NAVEGAÇÃO -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Benjamim<span class="logo-bracket">/&gt;</span>
+      </a>
+      <div class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="https://github.com/benjamim" target="_blank" rel="noopener" class="nav-github">GitHub</a>
+        <button class="nav-sidebar-toggle" id="sidebar-toggle" title="Ver projetos">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="2" width="6" height="6" rx="1.5" fill="currentColor" opacity="0.9"/>
+            <rect x="9" y="2" width="6" height="6" rx="1.5" fill="currentColor" opacity="0.5"/>
+            <rect x="1" y="10" width="6" height="4" rx="1.5" fill="currentColor" opacity="0.5"/>
+            <rect x="9" y="10" width="6" height="4" rx="1.5" fill="currentColor" opacity="0.9"/>
+          </svg>
+          Projetos
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BARRA LATERAL DE PROJETOS -->
+  <div class="projects-sidebar" id="projects-sidebar">
+    <div class="psidebar-header">
+      <div class="psidebar-title">
+        <span class="psidebar-title-icon">⬡</span> Projetos
+      </div>
+      <button class="psidebar-close" id="psidebar-close">✕</button>
+    </div>
+    <div class="psidebar-search">
+      <div class="psidebar-search-wrap">
+        <span class="psidebar-search-icon">⌕</span>
+        <input type="search" id="psidebar-search-input" placeholder="Buscar por nome ou tech..." autocomplete="off" />
+      </div>
+    </div>
+    <div class="psidebar-filters">
+      <button class="psidebar-filter active" data-sfilter="all">Todos</button>
+      <button class="psidebar-filter" data-sfilter="js">JS</button>
+      <button class="psidebar-filter" data-sfilter="python">Py</button>
+      <button class="psidebar-filter" data-sfilter="game">Games</button>
+    </div>
+    <div class="psidebar-count" id="psidebar-count"></div>
+    <div class="psidebar-divider"></div>
+    <div class="psidebar-list" id="psidebar-list">
+      <!-- preenchido pelo script.js -->
+    </div>
+  </div>
+  <div class="psidebar-backdrop" id="psidebar-backdrop"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow hero-glow-teal"></div>
+    <div class="hero-glow hero-glow-pink"></div>
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag-dot"></span> Disponível para projetos
+      </div>
+      <div class="hero-terminal">
+        <span class="terminal-prompt">&gt;&nbsp;</span><span id="typed-text"></span><span class="cursor" id="cursor">_</span>
+      </div>
+      <h1 class="hero-name">Benjamim</h1>
+      <div class="hero-roles">
+        <span class="role role-js">JavaScript</span>
+        <span class="role-sep">&amp;</span>
+        <span class="role role-py">Python</span>
+        <span class="role-sep">+</span>
+        <span class="role role-game">Game Dev</span>
+      </div>
+      <p class="hero-desc">
+        Desenvolvedor full-stack especializado em JavaScript e Python.<br>
+        Nas horas vagas, construo mundos — sou indie game developer.
+      </p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+        <a href="#sobre" class="btn btn-outline">Sobre mim</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar" id="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-value" id="stat-total">0</div>
+        <div class="stat-label">Projetos</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value stat-js" id="stat-js">0</div>
+        <div class="stat-label">JavaScript</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value stat-py" id="stat-py">0</div>
+        <div class="stat-label">Python</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-value stat-game" id="stat-game">0</div>
+        <div class="stat-label">Games</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="section-inner">
+      <div class="section-tag">
+        <span class="tag-line"></span> about.me
+      </div>
+      <h2 class="section-title">Quem sou eu</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Oi! Sou o <strong>Benjamim</strong>, desenvolvedor que vive entre
+            linhas de código e mundos virtuais. Trabalho principalmente com
+            <span class="hl-js">JavaScript</span> e <span class="hl-py">Python</span>
+            — desde interfaces web até automações e APIs.
+          </p>
+          <p>
+            Mas minha paixão vai além: sou <span class="hl-game">Game Developer</span>
+            por hobby e por amor. Criar experiências interativas, mecânicas que
+            surpreendem e mundos que as pessoas queiram explorar é o que me move.
+          </p>
+          <p>
+            Cada projeto é uma aventura — seja uma aplicação web, um script
+            que resolve um problema real, ou um jogo feito do zero.
+          </p>
+        </div>
+        <div class="about-skills">
+          <div class="skill-group">
+            <div class="skill-group-title skill-js-title">JavaScript</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">HTML/CSS</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Express</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title skill-py-title">Python</div>
+            <div class="skill-tags">
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">Automação</span>
+              <span class="skill-tag">Scripts</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <div class="skill-group-title skill-game-title">Games</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Game Design</span>
+              <span class="skill-tag">Pixel Art</span>
+              <span class="skill-tag">2D</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="projects-section" id="projetos">
+    <div class="section-inner">
+      <div class="section-tag">
+        <span class="tag-line"></span> projects[]
+      </div>
+      <div class="projects-header">
+        <h2 class="section-title">Projetos</h2>
+        <span class="projects-count" id="projects-count">0 projetos</span>
+      </div>
+
+      <div class="projects-layout">
+        <!-- SIDEBAR FILTRO -->
+        <aside class="filter-sidebar">
+          <div class="filter-label">Filtrar por</div>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+              <span class="filter-icon">◈</span>
+              <span class="filter-name">Todos</span>
+              <span class="filter-count" id="fc-all">0</span>
+            </button>
+            <button class="filter-btn" data-filter="js">
+              <span class="filter-icon filter-icon-js">JS</span>
+              <span class="filter-name">JavaScript</span>
+              <span class="filter-count" id="fc-js">0</span>
+            </button>
+            <button class="filter-btn" data-filter="python">
+              <span class="filter-icon filter-icon-py">Py</span>
+              <span class="filter-name">Python</span>
+              <span class="filter-count" id="fc-python">0</span>
+            </button>
+            <button class="filter-btn" data-filter="game">
+              <span class="filter-icon filter-icon-game">▶</span>
+              <span class="filter-name">Games</span>
+              <span class="filter-count" id="fc-game">0</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- GRID PROJETOS -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>Benjamim<span class="logo-bracket">/&gt;</span>
+      </div>
+      <div class="footer-copy">
+        &copy; <span id="footer-year"></span> — Feito com muito café e código
+      </div>
+      <a href="https://github.com/benjamim" target="_blank" rel="noopener" class="footer-github">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">✕</button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- VISUALIZADOR DE PROJETO (iframe fullscreen) -->
+  <div class="viewer-overlay" id="viewer-overlay">
+    <div class="viewer-bar">
+      <div class="viewer-title" id="viewer-title">Projeto</div>
+      <div class="viewer-actions">
+        <a class="viewer-btn viewer-btn-external" id="viewer-external" target="_blank" rel="noopener" title="Abrir em nova aba">↗ Nova aba</a>
+        <button class="viewer-btn viewer-btn-close" id="viewer-close" title="Fechar">✕ Fechar</button>
+      </div>
+    </div>
+    <iframe class="viewer-frame" id="viewer-frame" title="Visualizador de projeto" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
